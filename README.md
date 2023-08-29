@@ -1,7 +1,6 @@
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-comandos">Comandos</a>
 </p>
 
@@ -26,10 +25,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 
  Estou desenvolvendo este projeto para usar a api da pokeAPI de uso gratuito, para poder visualizar e selecionar todos os pokemons acessiveis pela api
-
-## 🔖 Layout
-Você pode ver o layout desse projeto por [esse link](https://www.figma.com/community/file/1196874589259687769). É preciso ter uma conta no [Figma](https://figma.com) para acessar.
-
 
 ## ⌨ Comandos
 
