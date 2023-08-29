@@ -1,27 +1,48 @@
-# React + TypeScript + Vite
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-comandos">Comandos</a>
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+ <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=49AA26&labelColor=000000" alt="PRs welcome!" />
+</p>
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Typescript
+- ReactJs
+- Styled Components
+- Vite
 
-## Expanding the ESLint configuration
+## Bibliotecas
+- [Typescript](https://www.typescriptlang.org/)
+- [ReactJS](https://react.dev)
+- [Vite](https://vitejs.dev)
+- [Styled Components](https://styled-components.com)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 💻 Projeto
 
-- Configure the top-level `parserOptions` property like this:
+ Estou desenvolvendo este projeto para usar a api da pokeAPI de uso gratuito, para poder visualizar e selecionar todos os pokemons acessiveis pela api
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## 🔖 Layout
+Você pode ver o layout desse projeto por [esse link](https://www.figma.com/community/file/1196874589259687769). É preciso ter uma conta no [Figma](https://figma.com) para acessar.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## ⌨ Comandos
+
+Para instalar as dependências:
+
+``` npm install  ```
+
+Para rodar o projeto localmente: 
+
+``` npm run dev  ```
+
+ ---
+
+<p>Feito com ❤️ por Josué Dias 👋🏽 Entre em contato!</p>
+
+[![Linkedin Badge](https://img.shields.io/badge/-Josuedias-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://https://www.linkedin.com/in/nycole-xavier-641271202/)](https://www.linkedin.com/in/josué-dias-271458224/)
