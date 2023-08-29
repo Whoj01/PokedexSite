@@ -1,0 +1,105 @@
+main {
+  max-width: 100vw;
+  width: 100%;
+  min-height: 80vh;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background: url("../public/bg-red.svg") no-repeat center / cover;
+}
+
+.header {
+  max-width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 30rem 0 30rem
+}
+
+.image {
+  height: 6.4rem;
+  width: 6.4rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+  background: #c2c2c2;
+  padding: .5rem .8rem;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+}
+
+.icon {
+  background: #f2f2f2;
+  padding: .5rem;
+  border-radius: 50%;
+}
+
+.textHelp {
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+
+.title {
+  font-family: Nunito;
+  font-size: 6.4rem;
+  font-weight: 700;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 65%;
+  left: 30%;
+  
+  animation: bounce 2s infinite ease-in forwards;
+}
+
+.imageLight {
+  height: 100%;
+  width: 17rem;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.findPoke {
+  padding: 0 30rem;
+  background: #EFF3F6;
+  height: calc(100vh - 70vh);
+  color: #2F3133;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
