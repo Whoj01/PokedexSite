@@ -5,9 +5,8 @@ main {
 }
 
 .container {
-  position: relative;
-  width: 100vw;
-  height: 70vh;
+  max-width: 100vw;
+  height: 75.6rem;
   display: flex;
   flex-direction: column;
   background: url("../public/bg-red.svg") no-repeat center / cover;
@@ -19,7 +18,8 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 30rem 0 30rem
+  margin-bottom: 5rem;
+  padding: 2rem 20rem 2rem 20rem;
 }
 
 .image {
@@ -32,7 +32,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: .8rem;
 }
 
 .card {
@@ -40,20 +40,26 @@ main {
   align-items: center;
   justify-content: center;
   gap: .8rem;
-  background: #c2c2c2;
+  background: #FFFFFF;
   padding: .5rem .8rem;
   border-radius: 50px;
   margin-bottom: 2rem;
 }
 
 .icon {
-  background: #f2f2f2;
+  background: #F6D9D9;
   padding: .5rem;
   border-radius: 50%;
 }
 
+.textIcon {
+  color: #C20001;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 .textHelp {
-  font-size: 3.2rem;
+  font-size: 1.8rem;
   font-weight: 400;
 }
 
@@ -63,16 +69,34 @@ main {
   font-weight: 700;
 }
 
+.explore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transform: rotate(-90deg);
+  position: absolute;
+  left: 19.8rem;
+}
+
+.iconExplore {
+  background-color: #C90C0C;
+  padding: .8rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .imageContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 65%;
-  left: 30%;
+  max-width: 79.8rem;
+  margin-top: 10rem;
   
-  animation: bounce 2s infinite ease-in forwards;
+  animation: bounce 2.5s infinite ease-in forwards;
 }
 
 .imageLight {
@@ -95,11 +119,53 @@ main {
 }
 
 .findPoke {
-  padding: 0 30rem;
   background: #EFF3F6;
-  height: calc(100vh - 70vh);
+  height: 32rem;
   color: #2F3133;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20rem;
+}
+
+.findPokeText {
+  font-size: 3.2rem;
+  font-weight: bold;
+  max-width: 26.5rem
+}
+
+.searchPoke {
+  background: #ffff;
+  border-radius: 122px;
+  height: 5.6rem;
+  max-width: 40.3rem;
+  display: flex;
+  align-items: center;
+  padding: 0 .8rem;
+  width: 100%;
+}
+
+.searchInput {
+  color: #A0AFBA;
+  font-size: 1.5rem;
+  flex-grow: 1;
+  margin-left: 1.5rem;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+.searchInput::placeholder {
+  color: #A0AFBA;
+  font-size: 1.5rem;
+}
+
+.searchButton {
+  height: 4.2rem;
+  width: 4.2rem;
+  border: 1px solid #E1E9EF;
+  background: #FAFBFD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
 }
