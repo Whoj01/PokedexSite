@@ -8,10 +8,9 @@ import { LandingTitle } from './components/LandingSection/LandingTitle'
 import { LandingHelperText } from './components/LandingSection/LandingHelperText'
 import { LandingExplore} from './components/LandingSection/LandingExplore/LandingExploreContainer'
 import { LandingImageContainer } from './components/LandingSection/LandingImage/LandingImageContainer'
+import { ContainerPokemons } from './components/Pokemons/Container'
 
 function App() {
- 
-
   return (
     <main>
       <Container>
@@ -31,17 +30,21 @@ function App() {
       </Container>
       
       <div className={styles.findPoke}>
-        <h2 className={styles.findPokeText}>
-          Selecione o seu pokemon
-        </h2>
+        <div className={styles.findPokeContainer}>
+          <h2 className={styles.findPokeText}>
+            Selecione o seu pokemon
+          </h2>
 
-        <form className={styles.searchPoke}>
-          <input className={styles.searchInput} placeholder='Procure pelo nome ou código'/>
-          <button className={styles.searchButton}>
-            <Search size={24} color='#AAC2E4'/>
-          </button>
-        </form>
+          <form className={styles.searchPoke}>
+            <input className={styles.searchInput} placeholder='Procure pelo nome ou código'/>
+            <button className={styles.searchButton}>
+              <Search size={24} color='#AAC2E4'/>
+            </button>
+          </form>
+        </div>
       </div>
+
+      <ContainerPokemons/>
     </main>
   )
 }

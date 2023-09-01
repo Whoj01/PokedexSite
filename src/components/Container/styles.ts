@@ -5,5 +5,6 @@ export const Container = styled.div`
   height: 75.6rem;
   display: flex;
   flex-direction: column;
-  background: url("../public/bg-red.svg") no-repeat center / cover;
+  align-items: center;
+  background: url("./bg-red.svg") no-repeat center / cover;
 `

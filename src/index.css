@@ -5,6 +5,10 @@
   min-height: 100vh;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   font-family: Nunito, sans-serif;
   line-height: 1.5;

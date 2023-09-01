@@ -49,11 +49,19 @@ main {
   color: #2F3133;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.findPokeContainer {
+  display: flex;
   justify-content: space-between;
-  padding: 0 20rem;
+  align-items: center;
+  max-width: 123.7rem;
+  width: 100%;
 }
 
 .findPokeText {
+  
   font-size: 3.2rem;
   font-weight: bold;
   max-width: 26.5rem
