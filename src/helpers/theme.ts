@@ -1,7 +1,7 @@
 export interface ThemeType {
   Pokemons: {
     [key: string]: {
-      backgroundColor: string,
+      backgroundColor?: string,
       text: string,
       Icon: string,
       BackgroundImage: string,

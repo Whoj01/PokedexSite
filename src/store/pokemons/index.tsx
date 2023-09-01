@@ -7,13 +7,16 @@ type PokemonsProps = {
 
 type ActionsProps = {
   addNewPokemons: (pokemons: PokemonsProps[]) => void
+  addPokemonsOfType: (pokemons: PokemonsProps[]) => void
   changeCountPokemons: (newCounter: number) => void
+  changeNextUrl: (url: string) => void
 }
 
 type storeProps = {
   state: {
     pokemons: PokemonsProps[]
-    countPokemons: number
+    countPokemons: number,
+    url: string
   }
   actions: ActionsProps
 }
@@ -21,19 +24,36 @@ type storeProps = {
 export const usePokemonsStore = create<storeProps>((set) => ({
   state: {
     pokemons: [],
-    countPokemons: 0
+    countPokemons: 0,
+    url: "",
   },
   actions: {
+    addPokemonsOfType: (newPokemons) => set((state) => ({
+      state: { 
+        countPokemons: state.state.countPokemons,
+        pokemons: [...newPokemons],
+        url: state.state.url
+      }
+    })),
     addNewPokemons: (newPokemons) => set((state) => ({
       state: { 
+        countPokemons: state.state.countPokemons,
         pokemons: [...state.state.pokemons, ...newPokemons],
-        countPokemons: state.state.countPokemons
+        url: state.state.url
       }
     })),
     changeCountPokemons: (newCount) => set((state) => ({
       state: {
+        pokemons: state.state.pokemons,
         countPokemons: newCount,
-        pokemons: state.state.pokemons
+        url: state.state.url
+      }
+    })),
+    changeNextUrl: (url) => set((state) => ({
+      state: {
+        pokemons: state.state.pokemons,
+        countPokemons: state.state.countPokemons,
+        url
       }
     }))
   }

@@ -28,8 +28,6 @@ export function PokemonCard({ name, url }: PokemonCardProps) {
   const [pokemon, setPokemon] = useState<pokemon>()
   const pokemonTheme = Theme.Pokemons[pokemon?.types[0].type.name as keyof ThemeType]
 
-  console.log(name)
-  console.log()
   useEffect(() => {
     getPokemonData()
   }, [])

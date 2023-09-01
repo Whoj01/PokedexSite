@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const TypesPokemon = styled.button<{$buttonColor: string, $selected: boolean}>`
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: start;
   min-width: 10rem;
   min-height: 100%;

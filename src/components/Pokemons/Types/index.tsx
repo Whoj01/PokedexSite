@@ -9,13 +9,17 @@ interface TypesPokemonProps {
   selected: string,
   setSelected: (type: string) => void
 }
-export function TypesPokemon({ pokemon, selected, setSelected }: TypesPokemonProps) {
+export function TypesPokemon({ pokemon, selected, setSelected}: TypesPokemonProps) {
   const typePokemon = Theme.Pokemons[pokemon.type as keyof ThemeType]
 
   const isSelected = pokemon.type === selected
 
+  const handleClick = () => {
+    setSelected(pokemon.type)
+  }
+
   return (
-    <S.TypesPokemon $selected={isSelected} value={pokemon.value} $buttonColor={typePokemon.text} onClick={() => setSelected(pokemon.type)}>
+    <S.TypesPokemon $selected={isSelected} value={pokemon.value} $buttonColor={typePokemon.text!} onClick={handleClick}>
      <S.iconType src={typePokemon.Icon} $selected={isSelected}/>
       <S.typeText>
         { pokemon.type }

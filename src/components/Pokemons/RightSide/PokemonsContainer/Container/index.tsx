@@ -1,17 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { PokemonCard } from '../PokemonCard'
 import * as S from './styles'
-
-interface pokemons {
-  results: Array<{
-    name: string,
-    url: string,
-  }>,
-  count: number,
-}
+import { usePokemonsStore } from '../../../../../store/pokemons'
 
 export function PokemonsContainer() {
-  const [pokemons, setPokemons] = useState<pokemons>()
+  const { state: { pokemons }, actions: { addNewPokemons, changeCountPokemons, changeNextUrl } } = usePokemonsStore()
 
   useEffect(() => {
     getPokemons()
@@ -21,13 +14,15 @@ export function PokemonsContainer() {
     await fetch("https://pokeapi.co/api/v2/pokemon")
       .then(res => res.json())
       .then(data => {
-        setPokemons(data)
+        addNewPokemons(data.results)
+        changeCountPokemons(data.count)
+        changeNextUrl(data.next)
       })
   }
-  
+
   return (
     <S.PokemonsCardContainer>
-      {pokemons?.results.map(pokemon => <PokemonCard name={pokemon.name} url={pokemon.url} key={pokemon.name}/>)}
+      {pokemons.map(pokemon => <PokemonCard name={pokemon.name} url={pokemon.url} key={pokemon.name}/>)}
     </S.PokemonsCardContainer>
   ) 
 }
