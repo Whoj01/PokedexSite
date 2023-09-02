@@ -31,7 +31,11 @@ export const usePokemonsStore = create<storeProps>((set) => ({
     addPokemonsOfType: (newPokemons) => set((state) => ({
       state: { 
         countPokemons: state.state.countPokemons,
-        pokemons: [...newPokemons],
+        pokemons: newPokemons.map(pokemon => {
+          if(pokemon.pokemon) return {...pokemon.pokemon}
+          
+          return {...pokemon}
+        }),
         url: state.state.url
       }
     })),

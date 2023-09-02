@@ -9,6 +9,7 @@ import { LandingHelperText } from './components/LandingSection/LandingHelperText
 import { LandingExplore} from './components/LandingSection/LandingExplore/LandingExploreContainer'
 import { LandingImageContainer } from './components/LandingSection/LandingImage/LandingImageContainer'
 import { ContainerPokemons } from './components/Pokemons/Container'
+import { Footer } from './components/Footer/Containter'
 
 function App() {
   return (
@@ -45,6 +46,8 @@ function App() {
       </div>
 
       <ContainerPokemons/>
+
+      <Footer/>
     </main>
   )
 }

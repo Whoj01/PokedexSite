@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, Suspense } from 'react'
 import { PokemonCard } from '../PokemonCard'
 import * as S from './styles'
 import { usePokemonsStore } from '../../../../../store/pokemons'
@@ -11,7 +11,7 @@ export function PokemonsContainer() {
   }, [])
 
   async function getPokemons() {
-    await fetch("https://pokeapi.co/api/v2/pokemon")
+    await fetch("https://pokeapi.co/api/v2/pokemon?offset=9&limit=9")
       .then(res => res.json())
       .then(data => {
         addNewPokemons(data.results)
@@ -20,9 +20,13 @@ export function PokemonsContainer() {
       })
   }
 
+  
+
   return (
     <S.PokemonsCardContainer>
-      {pokemons.map(pokemon => <PokemonCard name={pokemon.name} url={pokemon.url} key={pokemon.name}/>)}
+      <Suspense fallback={<p>Carregando</p>}>
+        {pokemons.map(pokemon => <PokemonCard name={pokemon.name} url={pokemon.url} key={pokemon.name}/>)}
+      </Suspense> 
     </S.PokemonsCardContainer>
   ) 
 }

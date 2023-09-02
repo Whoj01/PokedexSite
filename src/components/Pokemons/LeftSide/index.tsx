@@ -1,18 +1,14 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import PokemonsTypes from "../../../helpers/types"
 import { TypesPokemon } from "../Types"
 import * as S from './styles'
 
 export function LeftContainer() {
-  const [selected, setSelected] = useState<string>("")
+  const [selected, setSelected] = useState<string>("all")
 
-  const handleSelected = (type: string) => {
+  const handleSelected = async (type: string) => {
     setSelected(type)
   }
-
-  useEffect(() => {
-    setSelected("all")
-  }, [])
 
   return (
     <S.leftContainer>

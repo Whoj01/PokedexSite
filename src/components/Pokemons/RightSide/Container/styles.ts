@@ -8,7 +8,8 @@ export const RightSideContainer = styled.div`
   align-items: start;
   justify-content: start;
   gap: 8rem;
-  padding-top: 7rem
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 ` 
 
 export const AddMoreButtons = styled.div`

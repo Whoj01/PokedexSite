@@ -4,15 +4,19 @@ export interface ThemeType {
       backgroundColor?: string,
       text: string,
       Icon: string,
-      BackgroundImage: string,
-      type: string,
+      BackgroundImage?: string,
+      type?: string,
     }
   }
 }
 
-
 export const Theme: ThemeType = {
   Pokemons: {
+    all: {
+      Icon: './icon-all.svg',
+      text: '#4278C4',
+      type: "",
+    },
     normal: {
       backgroundColor: '#E8E8E8',
       text: '#909090',

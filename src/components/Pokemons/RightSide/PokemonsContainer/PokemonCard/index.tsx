@@ -4,6 +4,7 @@ import { Theme, ThemeType } from '../../../../../helpers/theme'
 
 interface pokemon {
   sprites: {
+    front_default: string
     other: {
       dream_world: {
         front_default: string
@@ -27,6 +28,7 @@ interface PokemonCardProps {
 export function PokemonCard({ name, url }: PokemonCardProps) {
   const [pokemon, setPokemon] = useState<pokemon>()
   const pokemonTheme = Theme.Pokemons[pokemon?.types[0].type.name as keyof ThemeType]
+  const pokemonSprite = pokemon?.sprites.other.dream_world.front_default ?? pokemon?.sprites.front_default
 
   useEffect(() => {
     getPokemonData()
@@ -42,23 +44,24 @@ export function PokemonCard({ name, url }: PokemonCardProps) {
  
   return (
     <S.PokemonContent>
-      <S.PokemonImageContainer $backgroundColor={pokemonTheme?.backgroundColor}>
-        <S.PokemonImage src={pokemon?.sprites.other.dream_world.front_default}/>
-      </S.PokemonImageContainer>
+     
+        <S.PokemonImageContainer $backgroundColor={pokemonTheme?.backgroundColor}>
+          <S.PokemonImage src={pokemonSprite}/>
+        </S.PokemonImageContainer>
 
-      <S.PokemonInfoContainer>
-        <S.PokemonCode>
-          #{pokemon?.id.toString().padStart(4, "0")}
-        </S.PokemonCode>
+        <S.PokemonInfoContainer>
+          <S.PokemonCode>
+            #{pokemon?.id.toString().padStart(4, "0")}
+          </S.PokemonCode>
 
-        <S.PokemonTypeInfo>
-          <S.PokemonName>
-            { name }
-          </S.PokemonName>
+          <S.PokemonTypeInfo>
+            <S.PokemonName>
+              { name }
+            </S.PokemonName>
 
-          <S.PokemonIconType src={pokemonTheme?.Icon}/>
-        </S.PokemonTypeInfo>
-      </S.PokemonInfoContainer>
+            <S.PokemonIconType src={pokemonTheme?.Icon}/>
+          </S.PokemonTypeInfo>
+        </S.PokemonInfoContainer>
     </S.PokemonContent>
   )
 }
