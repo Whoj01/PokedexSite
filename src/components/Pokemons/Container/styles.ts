@@ -26,4 +26,8 @@ export const ContentPoke = styled.div`
     flex-wrap: wrap;
     padding: 0 2rem;
   }
+
+  @media ${devices.monitor} {
+    padding: 0 5rem;
+  }
 `
