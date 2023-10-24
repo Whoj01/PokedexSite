@@ -46,7 +46,7 @@ export function PokemonCard({ name, url }: PokemonCardProps) {
   return (
     <S.PokemonContent>
         {/*@ts-ignore */}
-        <S.PokemonImageContainer $backgroundColor={pokemonTheme.backgroundColor}>
+        <S.PokemonImageContainer $backgroundColor={pokemonTheme?.backgroundColor}>
           <S.PokemonImage src={pokemonSprite}/>
         </S.PokemonImageContainer>
 
