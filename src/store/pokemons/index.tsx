@@ -32,6 +32,7 @@ export const usePokemonsStore = create<storeProps>((set) => ({
       state: { 
         countPokemons: state.state.countPokemons,
         pokemons: newPokemons.map(pokemon => {
+          //@ts-ignore
           if(pokemon.pokemon) return {...pokemon.pokemon}
           
           return {...pokemon}

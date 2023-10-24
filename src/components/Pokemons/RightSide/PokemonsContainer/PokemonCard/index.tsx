@@ -27,7 +27,7 @@ interface PokemonCardProps {
 
 export function PokemonCard({ name, url }: PokemonCardProps) {
   const [pokemon, setPokemon] = useState<pokemon>()
-  const pokemonTheme = Theme.Pokemons[pokemon?.types[0].type.name as keyof ThemeType]
+  const pokemonTheme = Theme.Pokemons[pokemon!.types[0].type.name as keyof ThemeType]
   const pokemonSprite = pokemon?.sprites.other.dream_world.front_default ?? pokemon?.sprites.front_default
 
   useEffect(() => {
@@ -44,8 +44,8 @@ export function PokemonCard({ name, url }: PokemonCardProps) {
  
   return (
     <S.PokemonContent>
-     
-        <S.PokemonImageContainer $backgroundColor={pokemonTheme?.backgroundColor}>
+        {/*@ts-ignore */}
+        <S.PokemonImageContainer $backgroundColor={pokemonTheme.backgroundColor}>
           <S.PokemonImage src={pokemonSprite}/>
         </S.PokemonImageContainer>
 

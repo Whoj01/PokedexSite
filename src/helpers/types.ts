@@ -12,7 +12,7 @@ const types  = Object.keys(Theme.Pokemons)
 types.map(type => {
   const pokemonType = {
     type,
-    value: Theme.Pokemons[type].type
+    value: Theme.Pokemons[type].type!
   }
 
   PokemonsTypes.push(pokemonType)
