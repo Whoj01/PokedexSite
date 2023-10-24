@@ -27,7 +27,8 @@ interface PokemonCardProps {
 
 export function PokemonCard({ name, url }: PokemonCardProps) {
   const [pokemon, setPokemon] = useState<pokemon>()
-  const pokemonTheme = Theme.Pokemons[pokemon!.types[0].type.name as keyof ThemeType]
+  //@ts-ignore
+  const pokemonTheme = Theme.Pokemons[pokemon?.types[0].type.name as keyof ThemeType]
   const pokemonSprite = pokemon?.sprites.other.dream_world.front_default ?? pokemon?.sprites.front_default
 
   useEffect(() => {
