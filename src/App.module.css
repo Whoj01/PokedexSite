@@ -56,12 +56,12 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   max-width: 123.7rem;
   width: 100%;
 }
 
 .findPokeText {
-  
   font-size: 3.2rem;
   font-weight: bold;
   max-width: 26.5rem
@@ -101,4 +101,16 @@ main {
   align-items: center;
   justify-content: center;
   border-radius: 100%;
+}
+
+@media (max-width: 1024px) {
+  .findPokeContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding-top: 6rem;
+    gap: 3rem;
+
+    text-align: center;
+  }
 }

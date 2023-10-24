@@ -2,5 +2,6 @@ import { styled } from 'styled-components'
 
 export const LandingPokeImage = styled.img`
   height: 100%;
-  width: 17rem;
+  max-width: 17rem;
+  width: 100%;
 `

@@ -1,4 +1,5 @@
 import { styled, keyframes } from 'styled-components'
+import { devices } from '../../../../helpers/breakpoints'
 
 const bounce = keyframes`
   0% {
@@ -19,8 +20,20 @@ export const LandingImageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   max-width: 79.8rem;
-  margin-top: 10rem;
+  width: 100%;
+  height: 100%;
   
   animation: ${bounce} 2.5s infinite ease-in forwards;
+
+  @media ${devices.phoneSm} {
+    
+  }
+`
+
+export const LandingPokeBallImage = styled.img`
+  height: 100%;
+  max-width: 50rem;
+  width: 100%;
 `

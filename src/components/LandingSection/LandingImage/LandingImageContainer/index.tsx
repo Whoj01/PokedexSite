@@ -6,7 +6,7 @@ export function LandingImageContainer() {
     <S.LandingImageContainer>
       <LandingPokeImage src='./luzes.svg' alt="Imagem de 3 luzes de estrelas"/>
 
-      <img src="./img-pokeball.png" alt="Imagem de uma pokebola vermelha" />
+      <S.LandingPokeBallImage src="./img-pokeball.png" alt="Imagem de uma pokebola vermelha" />
     </S.LandingImageContainer>
   )
 }
